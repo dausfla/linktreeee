@@ -1,0 +1,117 @@
+ /* Reset styling untuk menghilangkan margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur gaya umum untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e);  /* Latar belakang gradient navy yang lebih gelap */
+    display: flex;
+    justify-content: center;  /* Memastikan konten di tengah secara horizontal */
+    align-items: center;      /* Memastikan konten di tengah secara vertikal */
+    height: 100vh;            /* Menggunakan seluruh tinggi layar */
+    padding: 10px;
+}
+
+/* Container utama untuk konten */
+.container {
+    text-align: center;
+    background-color: white;  /* Latar belakang putih untuk konten */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Memastikan semua elemen di dalam container diatur di tengah */
+    justify-content: center;
+}
+
+/* Gaya untuk foto profil */
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #1f2d3d;  /* Border navy gelap */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Gaya untuk nama atau username */
+h1 {
+    font-size: 24px;
+    color: #2c3e50;  /* Warna teks navy gelap */
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk link */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;  /* Memastikan semua tautan di tengah */
+}
+
+/* Link default */
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Memastikan teks dan ikon sejajar di tengah */
+    padding: 10px;
+    background: linear-gradient(135deg, #34495e, #2c3e50);  /* Gradient navy untuk tautan */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 100%;  /* Menyusun link agar selebar kontainer */
+    max-width: 300px;  /* Membatasi lebar maksimal link */
+    transition: background 0.3s ease;
+}
+
+.link i {
+    margin-right: 10px;  /* Memberikan jarak antara ikon dan teks */
+}
+
+/* Efek hover untuk link */
+.link:hover {
+    background: linear-gradient(135deg, #2c3e50, #1f2d3d);  /* Gradient navy lebih gelap saat hover */
+}
+
+/* Media Query untuk perangkat dengan lebar layar 600px atau lebih kecil */
+@media (max-width: 600px) {
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .link {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Media Query untuk perangkat dengan lebar layar 400px atau lebih kecil */
+@media (max-width: 400px) {
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .link {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
